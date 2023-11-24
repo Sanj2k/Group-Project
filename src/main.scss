@@ -1,0 +1,62 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// Include any default variable overrides here (though functions won't be available)
+$primary: #4b1d3f;
+$secondary: #f8f3f2;
+$success: #6e3d10;
+$light: #f8f3f2;
+$dark: #4b1d3f;
+
+//$danger:
+//warning 
+//info
+//muted 
+//white
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
+// Then add additional custom code here
+body {
+    background: #4b1d3f;
+}
+
+hr {
+    background-color: #f8f3f2; 
+    height: 1px; 
+    border: 0; 
+}
+h1,h2,h3,h4,h5,h6,p{
+    font-family: Montserrat;
+    color: #4b1d3f;
+}
+.row-padding{
+    padding:10px;
+}
+.btn {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.btn-primary {
+
+    font-size: 13px;
+    color: #f8f3f2;
+    letter-spacing: 1px;
+    line-height: 15px;
+    border: 2px solid #4b1d3f;
+    border-radius: 40px;
+    background: #4b1d3f;
+    transition: all 0.3s ease 0s;
+  }
+
+  .form-control:focus {
+    box-shadow: none;
+  }
+  
+  .form-control-underlined {
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    padding-left: 0;
+  }
