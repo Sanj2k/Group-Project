@@ -1,6 +1,6 @@
 # group-project-comp229
 
-This is our GitHub repo for COMP229 Group 2 Project.
+This is our GitHub repo for COMP229 Group 2 Project..
 
 ## The following are instructions on how to contribute to the project.
 
