@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+<script>
+  window.addEventListener("load", (event) => {
+  console.log("page is fully loaded");
+  logMovies();
+  postData({ email:"hi123@gmail.com", username:"Spencerr", password:"ghytjl"});
+  logMovies();
+});
+  async function logMovies() {
+  const response = await fetch("http://localhost:3001/api/register");
+  const movies = await response.json();
+  console.log(movies);
+}
+
+// Example POST method implementation:
+async function postData( data = {}) {
+  // Default options are marked with *
+  const response = await fetch("http://localhost:3001/api/register", {
+    method: "POST", // *GET, POST, PUT, DELETE, etc.
+   //mode: "cors", // no-cors, *cors, same-origin
+    //cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    //credentials: "same-origin", // include, *same-origin, omit
+    headers: {
+      "Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    //redirect: "follow", // manual, *follow, error
+    //referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(data), // body data type must match "Content-Type" header
+  });
+  return response.json(); // parses JSON response into native JavaScript objects
+}
+</script>
+
+</body>
+</html>
