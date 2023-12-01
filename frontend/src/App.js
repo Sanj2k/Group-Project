@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import Navbar from "./component/navbar.component";
-import Home from "./component/home.component";
+
 import Engineering from "./component/engineering.component";
 import Physics from "./component/physics.component";
 import Computer from "./component/computer.component";
@@ -20,7 +20,7 @@ function App() {
       <Navbar />
       <br />
       <Routes>
-        <Route path="/" element={<Home />} />
+        
         <Route path="/engineer" element={<Engineering />} />
         <Route path="/physics" element={<Physics />} />
         <Route path="/computer" element={<Computer />} />
