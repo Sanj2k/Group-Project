@@ -4,7 +4,7 @@ export default class Computer extends Component {
     render() {
         return (
             <div>
-                <p>This is Computer Strickers</p>
+                <p>This is Computer Stickers</p>
             </div>
         )
     }

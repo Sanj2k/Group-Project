@@ -4,7 +4,7 @@ export default class chemistry extends Component {
     render() {
         return (
             <div>
-                <p>This is Chemsitry Strickers</p>
+                <p>This is Chemsitry Stickers</p>
             </div>
         )
     }

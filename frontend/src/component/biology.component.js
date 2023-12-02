@@ -4,7 +4,7 @@ export default class Biology extends Component {
     render() {
         return (
             <div>
-                <p>This is Biology Strickers</p>
+                <p>This is Biology Stickers</p>
             </div>
         )
     }

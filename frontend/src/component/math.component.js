@@ -4,7 +4,7 @@ export default class Math extends Component {
     render() {
         return (
             <div>
-                <p>This is Math Strickers</p>
+                <p>This is Math Stickers</p>
             </div>
         )
     }
