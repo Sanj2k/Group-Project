@@ -1,4 +1,5 @@
-import logo from './logo.svg';
+
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css"
 
@@ -14,13 +15,13 @@ import Login from "./component/login.component";
 import Signup from "./component/signup.component";
 
 
-function App() {
+const App = () => {
   return (
     <Router>
       <Navbar />
       <br />
-      <Routes>
-        
+      <switch>
+        <Routes>
         <Route path="/engineer" element={<Engineering />} />
         <Route path="/physics" element={<Physics />} />
         <Route path="/computer" element={<Computer />} />
@@ -29,7 +30,9 @@ function App() {
         <Route path="/math" element={<Math />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-      </Routes>
+        </Routes>
+      </switch>
+
     </Router>
   );
 }
