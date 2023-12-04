@@ -226,7 +226,11 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  
 }
+.navbar {
+  background-color: #4b1d3f; 
+};
 
 hr {
   margin: 1rem 0;
