@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 
 import '../main.css'
@@ -7,15 +7,17 @@ import '../main.css'
 
 
 
-export default class extends Component{
-   
-    render(){
-        return(
+export default class extends Component {
+
+    render() {
+        return (
+            <div className="container">
             <nav className="navbar navbar-dark  navbar-expand-lg">
-                
-                <Link to="/Home" className="navbar-brand">CTRL Strickers</Link>
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav">
+                        <li className="navbar-item">
+                            <Link to="/" className="navbar-brand">Ctrl + S(tickers)</Link>
+                        </li>
                         <li className="navbar-item">
                             <Link to="/engineer" className="nav-link">Engineering Stickers</Link>
                         </li>
@@ -35,16 +37,15 @@ export default class extends Component{
                             <Link to="/math" className="nav-link">Math Stickers</Link>
                         </li>
                         <li className="navbar-item">
-                            <Link to="/login" className="nav-link">Login</Link>
+                            <Link to="/All" className="nav-link">All Stickers</Link>
                         </li>
-                        <li className="navbar-item">
-                            <Link to="/signup" className="nav-link">Sign up</Link>
-                        </li>
-                        
+
+
                     </ul>
                 </div>
-                
+
             </nav>
+            </div>
         )
     }
 }

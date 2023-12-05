@@ -14,14 +14,16 @@ import Biology from "./component/biology.component";
 import Math from "./component/math.component";
 import Login from "./component/login.component";
 import Signup from "./component/signup.component";
+import All from './component/allStickers.component';
 
 
 
 const App = () => {
   return (
+    
     <Router>
        <Routes>
-        <Route path="/Home" element={<Home/>}/>
+        <Route path="/" element={<Home/>}/>
         <Route path="/engineer" element={<Engineering />} />
         <Route path="/physics" element={<Physics />} />
         <Route path="/computer" element={<Computer />} />
@@ -30,6 +32,8 @@ const App = () => {
         <Route path="/math" element={<Math />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/all" element={<All />} />
+        <Route path="/navbar" element={<navbar />} />
         </Routes>
     </Router>
   );

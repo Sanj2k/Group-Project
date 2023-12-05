@@ -31,8 +31,12 @@ const Signup = () => {
           onChange={(e) => setPassword(e.target.value)}
           value={password}
         />
-
+        <br />
+        <br />
         <button type="button" class="btn btn-primary">Sign Up</button>
+        <br /> 
+        <p>Have an account already?</p>
+        <p><a href="/login" className="nav-link">Log in here</a></p>
       </form>
     </div>
   );

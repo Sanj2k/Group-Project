@@ -39,6 +39,10 @@ export default class Home extends Component {
                             <p className="text-center text-secondary">
                                 <a href="/math" className="nav-link">Math Stickers</a>
                             </p>
+                            <hr />
+                            <p className="text-center text-secondary">
+                                <a href="/All" className="nav-link">All Stickers</a>
+                            </p>
                         </div>
                         <br />
                     </div>

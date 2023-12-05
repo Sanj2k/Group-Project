@@ -1,13 +1,18 @@
 import React,{Component} from "react";
+import Navbar from "./navbar.component";
 
-export default class allStickers extends Component {
+export default class All extends Component {
     render() {
         return (
+            <div>
+            <div className="row">
+            <Navbar />
+            </div>
             <div className="container bg-secondary rounded-4">
                 <div className="row">
                     <div className="col-sm-3">
                         <br />
-                        <img src="images/corner.png" class="img-fluid" alt="Responsive image" style={{ width: '75%' }}/>
+                        <img src="images/corner.png" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
                         <br />
                         <br />
                         <br />
@@ -78,23 +83,22 @@ export default class allStickers extends Component {
                                     </h1>
                                 </div>
                                 <div className="col-sm-4">
-                                    <button type="button" class="btn btn-primary">Log In</button>
-                                    <button type="button" class="btn btn-primary">Sign Up</button>
+                                <button type="button" className="btn btn-primary">
+                                            <a href="/login" className="nav-link">
+                                                Log In
+                                            </a>
+                                        </button>
+                                        <button type="button" className="btn btn-primary">
+                                            <a href="/signup" className="nav-link">
+                                                Sign Up
+                                            </a>
+                                        </button>
                                 </div>
                             </div>
                             <row>
                                 <br />
                                 <form action="">
-                                    <div className="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
-                                        <div className="input-group">
-                                            <input type="search" placeholder="  Search for stickers"
-                                                aria-describedby="button-addon1" class="form-control border-0 bg-secondary" />
-                                            <div className="input-group-append">
-                                                <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i
-                                                    class="fa fa-search"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                 </form>
                             </row>
                             <row>
@@ -104,32 +108,56 @@ export default class allStickers extends Component {
                             <div className="row">
                                 <br />
                                 <div className="col-sm-4">
-                                    <img src="images/PLACEHOLDER.png" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
-                                    <br />sticker 1
+                                    <a href="/engineer" className="nav-link">
+                                    <img src="images/engineering.jpg" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
+                                    <br />
+                                    <b>Engineering Name Sticker</b><br />
+                                    $3.99
+                                    </a>
                                 </div>
                                 <div className="col-sm-4">
-                                    <img src="images/PLACEHOLDER.png" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
-                                    <br />sticker 2
+                                <a href="/physics" className="nav-link">
+                                    <img src="images/physics.jpg" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
+                                    <br />
+                                    <b>Physics Name Sticker</b><br />
+                                    $3.99
+                                    </a>
                                 </div>
                                 <div className="col-sm-4">
-                                    <img src="images/PLACEHOLDER.png" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
-                                    <br />sticker 3
+                                <a href="/computer" className="nav-link">
+                                    <img src="images/computer.jpg" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
+                                    <br />
+                                    <b>Computer Science Name Sticker</b><br />
+                                    $3.99
+                                    </a>
                                 </div>
                                 <br />
                             </div>
                             <div className="row">
                                 <br />
                                 <div className="col-sm-4">
-                                    <img src="images/PLACEHOLDER.png" class="img-fluid" alt="Responsive image" style={{ width: '75%' }}/>
-                                    <br />sticker 1
+                                <a href="/chemistry" className="nav-link">
+                                    <img src="images/chemistry.jpg" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
+                                    <br />
+                                    <b>Chemistry Name Sticker</b><br />
+                                    $3.99
+                                    </a>
                                 </div>
                                 <div className="col-sm-4">
-                                    <img src="images/PLACEHOLDER.png" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
-                                    <br />sticker 2
+                                <a href="/biology" className="nav-link">
+                                    <img src="images/biology.jpg" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
+                                    <br />
+                                    <b>Biology Name Sticker</b><br />
+                                    $3.99
+                                    </a>
                                 </div>
                                 <div className="col-sm-4">
-                                    <img src="images/PLACEHOLDER.png" class="img-fluid" alt="Responsive image" style={{ width: '75%' }}/>
-                                    <br />sticker 3
+                                <a href="/math" className="nav-link">
+                                    <img src="images/math.jpg" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
+                                    <br />
+                                    <b>Math Name Sticker</b><br />
+                                    $3.99
+                                    </a>
                                 </div>
                                 <br />
                             </div>
@@ -139,6 +167,7 @@ export default class allStickers extends Component {
                     </div>
                 </div>
             </div>
+        </div>
         )
     }
 }
