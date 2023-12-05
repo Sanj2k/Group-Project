@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../App';
 import Navbar from "./navbar.component";
+import '../main.css';
 
 
 const Login = () => {
@@ -12,6 +13,10 @@ const Login = () => {
 
     console.log(email, password);
   };
+
+  useEffect(() => {
+    document.title = "Log In";
+  }, []);
 
   return (
     <div>

@@ -1,6 +1,9 @@
 import React,{Component} from "react";
 import Navbar from "./navbar.component";
 export default class Computer extends Component {
+    componentDidMount() {
+        document.title = "Computer Science Stickers"; // Set the desired page title here
+      }
     render() {
         return (
             <div>

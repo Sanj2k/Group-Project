@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import Navbar from "./navbar.component";
 
 export default class Biology extends Component {
+    componentDidMount() {
+        document.title = "Biology Stickers"; // Set the desired page title here
+      }
     render() {
         return (
             <div>

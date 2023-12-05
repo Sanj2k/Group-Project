@@ -1,6 +1,9 @@
 import React,{Component} from "react";
 import Navbar from "./navbar.component";
 export default class Math extends Component {
+    componentDidMount() {
+        document.title = "Math Stickers"; // Set the desired page title here
+      }
     render() {
         return (
             <div>

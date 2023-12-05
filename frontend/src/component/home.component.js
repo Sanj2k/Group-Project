@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 
 export default class Home extends Component {
+    componentDidMount() {
+        document.title = "Home"; // Set the desired page title here
+      }
     render() {
         return (
             <div className="container">

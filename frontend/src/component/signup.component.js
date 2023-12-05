@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from "./navbar.component";
 import '../main.css';
 
@@ -11,6 +11,11 @@ const Signup = () => {
 
     console.log(email, password);
   };
+
+
+  useEffect(() => {
+    document.title = "Sign Up";
+  }, []);
 
   return (
     <div>
@@ -33,7 +38,7 @@ const Signup = () => {
         />
         <br />
         <br />
-        <button type="button" class="btn btn-primary">Sign Up</button>
+        <button type="button" className="btn btn-primary">Sign Up</button>
         <br /> 
         <p>Have an account already?</p>
         <p><a href="/login" className="nav-link">Log in here</a></p>
@@ -41,4 +46,5 @@ const Signup = () => {
     </div>
   );
 };
+
 export default Signup;

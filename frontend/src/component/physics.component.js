@@ -1,6 +1,9 @@
 import React,{Component} from "react";
 import Navbar from "./navbar.component";
 export default class Physics extends Component {
+    componentDidMount() {
+        document.title = "Physics Stickers"; // Set the desired page title here
+      }
     render() {
         return (
             <div>
