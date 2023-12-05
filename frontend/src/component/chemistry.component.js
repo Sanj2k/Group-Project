@@ -1,10 +1,12 @@
 import React,{Component} from "react";
-
+import Navbar from "./navbar.component";
 export default class chemistry extends Component {
     render() {
         return (
             <div>
-                <p>This is Chemsitry Stickers</p>
+                <div className="row">
+                <Navbar />
+                </div>
             </div>
         )
     }

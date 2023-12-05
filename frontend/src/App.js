@@ -1,10 +1,11 @@
-
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css"
+import { Link } from 'react-router-dom';
 
 import Navbar from "./component/navbar.component";
 
+import Home from './component/home.component';
 import Engineering from "./component/engineering.component";
 import Physics from "./component/physics.component";
 import Computer from "./component/computer.component";
@@ -15,13 +16,12 @@ import Login from "./component/login.component";
 import Signup from "./component/signup.component";
 
 
+
 const App = () => {
   return (
     <Router>
-      <Navbar />
-      <br />
-      <switch>
-        <Routes>
+       <Routes>
+        <Route path="/Home" element={<Home/>}/>
         <Route path="/engineer" element={<Engineering />} />
         <Route path="/physics" element={<Physics />} />
         <Route path="/computer" element={<Computer />} />
@@ -31,8 +31,6 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         </Routes>
-      </switch>
-
     </Router>
   );
 }

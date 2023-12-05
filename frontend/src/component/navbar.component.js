@@ -13,7 +13,7 @@ export default class extends Component{
         return(
             <nav className="navbar navbar-dark  navbar-expand-lg">
                 
-                <Link to="/" className="navbar-brand">CTRL Strickers</Link>
+                <Link to="/Home" className="navbar-brand">CTRL Strickers</Link>
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav">
                         <li className="navbar-item">
@@ -40,6 +40,7 @@ export default class extends Component{
                         <li className="navbar-item">
                             <Link to="/signup" className="nav-link">Sign up</Link>
                         </li>
+                        
                     </ul>
                 </div>
                 
