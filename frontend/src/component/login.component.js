@@ -39,7 +39,7 @@ const Login = () => {
         />
         <br />
         <br />
-        <button type="button" class="btn btn-primary">Log In</button>
+        <button type="button" class="btn btn-primary"><a href="/LoginConfirm" className="nav-link">Log In</a></button>
         <br /> 
         <p>No account?</p>
         <p><a href="/signup" className="nav-link">Sign up here</a></p>

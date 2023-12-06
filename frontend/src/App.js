@@ -15,6 +15,7 @@ import Math from "./component/math.component";
 import Login from "./component/login.component";
 import Signup from "./component/signup.component";
 import All from './component/allStickers.component';
+import LoginConfirm from './component/confirmLogin.component';
 
 
 
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/all" element={<All />} />
         <Route path="/navbar" element={<navbar />} />
+        <Route path="/LoginConfirm" element={<LoginConfirm />} />
         </Routes>
     </Router>
   );
