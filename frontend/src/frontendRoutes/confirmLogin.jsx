@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import Navbar from "./navbar.component";
+import navbar from "./navbar";
 
 export default class LoginConfirm extends Component {
     componentDidMount() {
@@ -8,7 +8,7 @@ export default class LoginConfirm extends Component {
     render() {
         return (
             <div>
-                <Navbar />
+                <navbar />
                 <div className="container bg-secondary rounded-4">
                     <div className="row">
                         <div className="col-sm-3">

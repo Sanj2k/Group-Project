@@ -1,28 +1,37 @@
 import { useState, useEffect } from 'react';
-import '../App';
-import Navbar from "./navbar.component";
+import Navbar from './navbar';
 import '../main.css';
 
-
-const Login = () => {
+const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(email, password);
+    try {
+      const response = await axios.post('/register', {
+        email, 
+        password
+      });
+  
+      console.log(response.data);
+
+    } catch (error) {
+      console.log(error);
+    }
+
   };
 
   useEffect(() => {
-    document.title = "Log In";
+    document.title = "Sign Up";
   }, []);
 
   return (
     <div>
       <Navbar />
-      <form className="login" onSubmit={handleSubmit}>
-        <h3>Log in</h3>
+      <form className="signup" onSubmit={handleSubmit}>
+        <h3>Sign up</h3>
 
         <label>Email:</label>
         <input
@@ -39,15 +48,13 @@ const Login = () => {
         />
         <br />
         <br />
-        <button type="button" class="btn btn-primary"><a href="/LoginConfirm" className="nav-link">Log In</a></button>
+        <button type="button" className="btn btn-primary">Sign Up</button>
         <br /> 
-        <p>No account?</p>
-        <p><a href="/signup" className="nav-link">Sign up here</a></p>
-
+        <p>Have an account already?</p>
+        <p><a href="/login" className="nav-link">Log in here</a></p>
       </form>
-
     </div>
   );
 };
 
-export default Login;
+export default Signup;

@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
-import Navbar from "./navbar.component";
+import '../App';
+import Navbar from './navbar';
 import '../main.css';
 
-const Signup = () => {
+
+const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -12,16 +14,15 @@ const Signup = () => {
     console.log(email, password);
   };
 
-
   useEffect(() => {
-    document.title = "Sign Up";
+    document.title = "Log In";
   }, []);
 
   return (
     <div>
       <Navbar />
-      <form className="signup" onSubmit={handleSubmit}>
-        <h3>Sign up</h3>
+      <form className="login" onSubmit={handleSubmit}>
+        <h3>Log in</h3>
 
         <label>Email:</label>
         <input
@@ -38,13 +39,15 @@ const Signup = () => {
         />
         <br />
         <br />
-        <button type="button" className="btn btn-primary">Sign Up</button>
+        <button type="button" class="btn btn-primary"><a href="/LoginConfirm" className="nav-link">Log In</a></button>
         <br /> 
-        <p>Have an account already?</p>
-        <p><a href="/login" className="nav-link">Log in here</a></p>
+        <p>No account?</p>
+        <p><a href="/signup" className="nav-link">Sign up here</a></p>
+
       </form>
+
     </div>
   );
 };
 
-export default Signup;
+export default Login;

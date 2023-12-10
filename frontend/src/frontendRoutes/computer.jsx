@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import Navbar from "./navbar.component";
-export default class Engineering extends Component {
+import React,{Component} from "react";
+import Navbar from "./navbar";
+export default class Computer extends Component {
     componentDidMount() {
-        document.title = "Engineering Stickers"; // Set the desired page title here
+        document.title = "Computer Science Stickers"; // Set the desired page title here
       }
     render() {
         return (
@@ -42,18 +42,18 @@ export default class Engineering extends Component {
                                 </div>
                                 <div className="row">
                                     <br />
-                                    <h3>Engineering Stickers</h3>
+                                    <h3>Computer Science Stickers</h3>
                                 </div>
                                 <div className="row">
                                     <div className="col-sm-6">
-                                        <img src="images/engineering.jpg" className="img-fluid" alt="Responsive image" style={{ width: '90%' }} />
+                                        <img src="images/computer.jpg" className="img-fluid" alt="Responsive image" style={{ width: '90%' }} />
                                     </div>
                                     <div className="col-sm-5">
-                                        <h4>Engineering Name Sticker</h4>
+                                        <h4>Computer Science Name Sticker</h4>
                                         <br />
                                         <h5>Price: $3.99</h5>
                                         <br />
-                                        <h6>This sticker is perfect for you and all the engineers in your life!</h6>
+                                        <h6>This sticker is perfect for you and all the chomputer scientists in your life!</h6>
                                     </div>
                                 </div>
                                 <div className="row">

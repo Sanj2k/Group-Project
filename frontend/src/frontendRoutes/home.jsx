@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-
+import "bootstrap/dist/css/bootstrap.min.css"
+import '../main.css'
+import { Link } from "react-router-dom";
 export default class Home extends Component {
     componentDidMount() {
         document.title = "Home"; // Set the desired page title here
@@ -20,31 +22,31 @@ export default class Home extends Component {
                         <div className="container pt-5">
                             <br />
                             <p className="text-center text-secondary">
-                                <a href="/engineer" className="nav-link">Engineering Stickers</a>
+                            <Link to="/engineer" className="nav-link">Engineering Stickers</Link>
                             </p>
                             <hr />
                             <p className="text-center text-secondary">
-                                <a href="/physics" className="nav-link">Physics Stickers</a>
+                            <Link to="/physics" className="nav-link">Physics Stickers</Link>
                             </p>
                             <hr />
                             <p className="text-center text-secondary">
-                                <a href="/computer" className="nav-link">Computer Science Stickers</a>
+                            <Link to="/computer" className="nav-link">Computer Science Stickers</Link>
                             </p>
                             <hr />
                             <p className="text-center text-secondary">
-                                <a href="/chemistry" className="nav-link">Chemistry Stickers</a>
+                            <Link to="/chemistry" className="nav-link">Chemistry Stickers</Link>
                             </p>
                             <hr />
                             <p className="text-center text-secondary">
-                                <a href="/biology" className="nav-link">Biology Stickers</a>
+                            <Link to="/biology" className="nav-link">Biology Stickers</Link>
                             </p>
                             <hr />
                             <p className="text-center text-secondary">
-                                <a href="/math" className="nav-link">Math Stickers</a>
+                            <Link to="/math" className="nav-link">Math Stickers</Link>
                             </p>
                             <hr />
                             <p className="text-center text-secondary">
-                                <a href="/All" className="nav-link">All Stickers</a>
+                            <Link to="/All" className="nav-link">All Stickers</Link>
                             </p>
                         </div>
                         <br />

@@ -1,8 +1,8 @@
 import React,{Component} from "react";
-import Navbar from "./navbar.component";
-export default class Math extends Component {
+import Navbar from "./navbar";
+export default class Physics extends Component {
     componentDidMount() {
-        document.title = "Math Stickers"; // Set the desired page title here
+        document.title = "Physics Stickers"; // Set the desired page title here
       }
     render() {
         return (
@@ -42,18 +42,18 @@ export default class Math extends Component {
                                 </div>
                                 <div className="row">
                                     <br />
-                                    <h3>Math Stickers</h3>
+                                    <h3>Physics Stickers</h3>
                                 </div>
                                 <div className="row">
                                     <div className="col-sm-6">
-                                        <img src="images/math.jpg" className="img-fluid" alt="Responsive image" style={{ width: '90%' }} />
+                                        <img src="images/physics.jpg" className="img-fluid" alt="Responsive image" style={{ width: '90%' }} />
                                     </div>
                                     <div className="col-sm-5">
-                                        <h4>Math Name Sticker</h4>
+                                        <h4>Physics Name Sticker</h4>
                                         <br />
                                         <h5>Price: $3.99</h5>
                                         <br />
-                                        <h6>This sticker is perfect for you and all the mathemeticians in your life!</h6>
+                                        <h6>This sticker is perfect for you and all the physicsists in your life!</h6>
                                     </div>
                                 </div>
                                 <div className="row">

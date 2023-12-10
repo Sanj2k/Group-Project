@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Navbar from "./navbar.component";
+import Navbar from "./navbar";
 
 export default class Biology extends Component {
     componentDidMount() {
