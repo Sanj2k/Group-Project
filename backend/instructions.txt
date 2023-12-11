@@ -1,3 +1,4 @@
 Instructions after cloning repo
-    - npm install express // this installs node_modules
-    - npx nodemon server // this starts the server
+    - npm install express // this installs node_modules inside backend and frontend folder as this is not in github
+    - npm run dev // this starts the frontend
+    - npm start // runs the backend

@@ -1,25 +1,38 @@
 import { useState, useEffect } from 'react';
 import Navbar from './navbar';
 import '../main.css';
+import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('/register', {
-        email, 
+      const response = await axios.post('http://localhost:3001/', {
+        email,
         password
       });
-  
-      console.log(response.data);
+    
+      if (response.data === "exist") {
+        alert("You already have an account");
+      } else if (response.data === "not exist") {
+        navigate("/", { state: { id: email } });
+      }
 
+      console.log(response.data);
     } catch (error) {
-      console.log(error);
+      alert("Email or Password is incorrect");
+      console.error(error);
     }
+  
+    
+
+    
 
   };
 
@@ -48,7 +61,7 @@ const Signup = () => {
         />
         <br />
         <br />
-        <button type="button" className="btn btn-primary">Sign Up</button>
+        <button type="submit" className="btn btn-primary">Sign Up</button>
         <br /> 
         <p>Have an account already?</p>
         <p><a href="/login" className="nav-link">Log in here</a></p>

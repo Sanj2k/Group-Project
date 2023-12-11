@@ -2,16 +2,42 @@ import { useState, useEffect } from 'react';
 import '../App';
 import Navbar from './navbar';
 import '../main.css';
+import axios from "axios";
+import { useNavigate, Link } from 'react-router-dom';
 
 
 const Login = () => {
+
+  const navigate = useNavigate();
+
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(email, password);
+    try{
+      await axios.post('http://localhost:3001/', {
+        email,
+        password
+      })
+      .then(res =>{
+        if (res.data === "exist") {
+          navigate("/home", { state: { id: email } });
+      } else if (res.data === "not exist") {
+          navigate("/home", { state: { id: email } });
+          alert("You did not sign up");
+      }
+      })
+      .catch(e =>{
+        alert("Email or Password is incorrect")
+        console.log(e);
+      })
+      
+      }catch (e) {
+    console.log(e);
+    }
   };
 
   useEffect(() => {
@@ -40,12 +66,12 @@ const Login = () => {
         <br />
         <br />
         <button type="button" class="btn btn-primary"><a href="/LoginConfirm" className="nav-link">Log In</a></button>
-        <br /> 
+        <br />
         <p>No account?</p>
         <p><a href="/signup" className="nav-link">Sign up here</a></p>
 
-      </form>
-
+      </form>-
+      <Link to="/signup" className="nav-link">Sign up here</Link>
     </div>
   );
 };
