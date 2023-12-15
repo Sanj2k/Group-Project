@@ -8,14 +8,12 @@ export default class All extends Component {
     render() {
         return (
             <div>
-            <div className="row">
             <Navbar />
-            </div>
             <div className="container bg-secondary rounded-4">
                 <div className="row">
                     <div className="col-sm-3">
                         <br />
-                        <img src="images/corner.png" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
+                        <img src="images/corner.png" className="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
                         <br />
                         <br />
                         <br />
@@ -25,53 +23,53 @@ export default class All extends Component {
                             <form action="/action_page.php">
                                 Colour
                                 <div className="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check2" name="option2"
+                                    <input type="checkbox" className="form-check-input" id="check2" name="option2"
                                         value="something" />
-                                    <label class="form-check-label" for="check2">Option 2</label>
+                                    <label className="form-check-label" htmlFor="check2">Option 2</label>
                                 </div>
                                 <div className="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check2" name="option2"
+                                    <input type="checkbox" className="form-check-input" id="check2" name="option2"
                                         value="something" />
-                                    <label class="form-check-label" for="check2">Option 2</label>
+                                    <label className="form-check-label" htmlFor="check2">Option 2</label>
                                 </div>
                                 <div className="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check2" name="option2"
+                                    <input type="checkbox" className="form-check-input" id="check2" name="option2"
                                         value="something" />
-                                    <label class="form-check-label" for="check2">Option 2</label>
+                                    <label className="form-check-label" htmlFor="check2">Option 2</label>
                                 </div>
                                 Size
                                 <div className="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check2" name="option2"
+                                    <input type="checkbox" className="form-check-input" id="check2" name="option2"
                                         value="something" />
-                                    <label class="form-check-label" for="check2">Option 2</label>
+                                    <label className="form-check-label" htmlFor="check2">Option 2</label>
                                 </div>
                                 <div className="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check2" name="option2"
+                                    <input type="checkbox" className="form-check-input" id="check2" name="option2"
                                         value="something" />
-                                    <label class="form-check-label" for="check2">Option 2</label>
+                                    <label className="form-check-label" htmlFor="check2">Option 2</label>
                                 </div>
                                 <div className="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check2" name="option2"
+                                    <input type="checkbox" className="form-check-input" id="check2" name="option2"
                                         value="something" />
-                                    <label class="form-check-label" for="check2">Option 2</label>
+                                    <label className="form-check-label" htmlFor="check2">Option 2</label>
                                 </div>
                                 Style
                                 <div className="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check2" name="option2"
+                                    <input type="checkbox" className="form-check-input" id="check2" name="option2"
                                         value="something" />
-                                    <label class="form-check-label" for="check2">Option 2</label>
+                                    <label className="form-check-label" htmlFor="check2">Option 2</label>
                                 </div>
                                 <div className="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check2" name="option2"
+                                    <input type="checkbox" className="form-check-input" id="check2" name="option2"
                                         value="something" />
-                                    <label class="form-check-label" for="check2">Option 2</label>
+                                    <label className="form-check-label" htmlFor="check2">Option 2</label>
                                 </div>
                                 <div className="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check2" name="option2"
+                                    <input type="checkbox" className="form-check-input" id="check2" name="option2"
                                         value="something" />
-                                    <label class="form-check-label" for="check2">Option 2</label>
+                                    <label className="form-check-label" htmlFor="check2">Option 2</label>
                                 </div>
-                                <button type="submit" class="btn btn-primary mt-3">Update Search</button>
+                                <button type="submit" className="btn btn-primary mt-3">Update Search</button>
                             </form>
                         </div>
                     </div>
@@ -98,21 +96,21 @@ export default class All extends Component {
                                         </button>
                                 </div>
                             </div>
-                            <row>
+                            <div className="row">
                                 <br />
                                 <form action="">
                                     
                                 </form>
-                            </row>
-                            <row>
+                            </div>
+                            <div className="row">
                                 <br />
                                 <h3>Search Results</h3>
-                            </row>
+                            </div>
                             <div className="row">
                                 <br />
                                 <div className="col-sm-4">
                                     <a href="/engineer" className="nav-link">
-                                    <img src="images/engineering.jpg" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
+                                    <img src="images/engineering.jpg" className="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
                                     <br />
                                     <b>Engineering Name Sticker</b><br />
                                     $3.99
@@ -120,7 +118,7 @@ export default class All extends Component {
                                 </div>
                                 <div className="col-sm-4">
                                 <a href="/physics" className="nav-link">
-                                    <img src="images/physics.jpg" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
+                                    <img src="images/physics.jpg" className="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
                                     <br />
                                     <b>Physics Name Sticker</b><br />
                                     $3.99
@@ -128,7 +126,7 @@ export default class All extends Component {
                                 </div>
                                 <div className="col-sm-4">
                                 <a href="/computer" className="nav-link">
-                                    <img src="images/computer.jpg" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
+                                    <img src="images/computer.jpg" className="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
                                     <br />
                                     <b>Computer Science Name Sticker</b><br />
                                     $3.99
@@ -140,7 +138,7 @@ export default class All extends Component {
                                 <br />
                                 <div className="col-sm-4">
                                 <a href="/chemistry" className="nav-link">
-                                    <img src="images/chemistry.jpg" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
+                                    <img src="images/chemistry.jpg" className="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
                                     <br />
                                     <b>Chemistry Name Sticker</b><br />
                                     $3.99
@@ -148,7 +146,7 @@ export default class All extends Component {
                                 </div>
                                 <div className="col-sm-4">
                                 <a href="/biology" className="nav-link">
-                                    <img src="images/biology.jpg" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
+                                    <img src="images/biology.jpg" className="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
                                     <br />
                                     <b>Biology Name Sticker</b><br />
                                     $3.99
@@ -156,7 +154,7 @@ export default class All extends Component {
                                 </div>
                                 <div className="col-sm-4">
                                 <a href="/math" className="nav-link">
-                                    <img src="images/math.jpg" class="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
+                                    <img src="images/math.jpg" className="img-fluid" alt="Responsive image" style={{ width: '75%' }} />
                                     <br />
                                     <b>Math Name Sticker</b><br />
                                     $3.99
