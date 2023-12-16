@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import Navbar from './navbar';
+import Navbar from '../../../../frontend/src/frontendRoutes/navbar';
 import '../main.css';
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
@@ -13,26 +13,28 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3001/', {
+      const response = await axios.post('http://localhost:3001/app/signup', {
         email,
-        password
+        password,
+        
       });
-    
+
       if (response.data === "exist") {
         alert("You already have an account");
       } else if (response.data === "not exist") {
         navigate("/", { state: { id: email } });
+        alert("You created your account successfully");
       }
 
       console.log(response.data);
     } catch (error) {
-      alert("Email or Password is incorrect");
+      alert("You cannot Signup something went wrong");
       console.error(error);
     }
-  
-    
 
-    
+
+
+
 
   };
 
@@ -62,12 +64,13 @@ const Signup = () => {
         <br />
         <br />
         <button type="submit" className="btn btn-primary">Sign Up</button>
-        <br /> 
+        <br />
         <p>Have an account already?</p>
         <p><a href="/login" className="nav-link">Log in here</a></p>
       </form>
     </div>
   );
 };
+
 
 export default Signup;

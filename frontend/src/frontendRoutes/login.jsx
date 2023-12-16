@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import '../App';
-import Navbar from './navbar';
+import '../../../../frontend/src/App';
+import Navbar from '../../../../frontend/src/frontendRoutes/navbar';
 import '../main.css';
 import axios from "axios";
 import { useNavigate, Link } from 'react-router-dom';
@@ -18,7 +18,7 @@ const Login = () => {
     e.preventDefault();
 
     try{
-      await axios.post('http://localhost:3001/', {
+      await axios.post('http://localhost:3001/app/signup', {
         email,
         password
       })
@@ -65,7 +65,7 @@ const Login = () => {
         />
         <br />
         <br />
-        <button type="button" className="btn btn-primary"><a href="/LoginConfirm" className="nav-link">Log In</a></button>
+        <button type="button" class="btn btn-primary"><a href="/LoginConfirm" className="nav-link">Log In</a></button>
         <br />
         <p>No account?</p>
         <p><a href="/signup" className="nav-link">Sign up here</a></p>

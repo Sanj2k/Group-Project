@@ -1,17 +1,26 @@
 const express = require("express");
-const {
-  createAccount,
-  getLogin,
-  getUser,
-} = require("../controllers/userController");
 const router = express.Router();
+const User = require("../models/userSchema");
+const bcrypt = require("bcrypt");
 
-// the following is to get user registration and user login
-router.post("/register", createAccount);
+router.post('/signup', async (req, res) => {
 
-router.get("/register", getUser);
+  const saltPassword = await bcrypt.genSalt(10);
+  const securePassword = await bcrypt.hash(req.body.password, saltPassword);
 
-router.get("/login", getLogin);
-// registration and user login route ends here
 
+  const signnUpUser = new User({
+    email: req.body.email,
+    password:securePassword
+})
+  signnUpUser.save()
+  .then(data =>{
+    res.json(data)
+  })
+  .catch(error=>{
+    res.json(error)
+  })
+})
+
+router.get('/signin')
 module.exports = router;
